@@ -1,0 +1,36 @@
+YAPAY ZEKA MODEL KARŞILAŞTIRMA RAPORU
+Donanım: NVIDIA RTX 3060
+=====================================
+
+--- Model: Senaryo 1 (Baz Model) ---
+Tarih: 2025-12-12 11:23:22.695678
+Donanım: GPU (RTX 3060)
+Parametreler: {'name': 'Senaryo 1 (Baz Model)', 'filters': [32, 64, 128], 'dense_units': [128], 'optimizer': 'adam', 'dropout': False, 'desc': 'Standart 3 katmanlı yapı, Adam optimizasyonu.'}
+Test Accuracy: %99.69
+Test Loss: 0.0122
+------------------------------
+
+--- Model: Senaryo 2 (Derin ve Dar - SGD) ---
+Tarih: 2025-12-12 11:33:53.040496
+Donanım: GPU (RTX 3060)
+Parametreler: {'name': 'Senaryo 2 (Derin ve Dar - SGD)', 'filters': [16, 32, 64, 128], 'dense_units': [64, 32], 'optimizer': 'sgd', 'dropout': False, 'desc': '4 katmanlı, SGD optimizer.'}
+Test Accuracy: %99.77
+Test Loss: 0.0092
+------------------------------
+
+--- Model: Senaryo 3 (Geniş ve RMSprop) ---
+Tarih: 2025-12-12 11:41:26.468005
+Donanım: GPU (RTX 3060)
+Parametreler: {'name': 'Senaryo 3 (Geniş ve RMSprop)', 'filters': [64, 128, 256], 'dense_units': [256], 'optimizer': 'rmsprop', 'dropout': False, 'desc': 'Geniş ağ, RMSprop optimizasyonu.'}
+Test Accuracy: %99.75
+Test Loss: 0.0147
+------------------------------
+
+--- Model: Senaryo 4 (Robust - Dropoutlu) ---
+Tarih: 2025-12-12 11:48:23.292802
+Donanım: GPU (RTX 3060)
+Parametreler: {'name': 'Senaryo 4 (Robust - Dropoutlu)', 'filters': [32, 64, 128, 256], 'dense_units': [512], 'optimizer': 'adam', 'dropout': True, 'desc': '4 katman + Dropout katmanları.'}
+Test Accuracy: %99.89
+Test Loss: 0.0054
+------------------------------
+
